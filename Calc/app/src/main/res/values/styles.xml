@@ -8,4 +8,51 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="numberButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:enabled">true</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorLightBlue</item>
+    </style>
+
+    <style name="operatorButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+
+
+    </style>
+
+    <style name="operandsLayout">
+        <item name="android:layout_weight">3</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/colorLightBlue</item>
+        <item name="android:weightSum">8</item>
+    </style>
+
+    <style name="operandsTextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_weight">7</item>
+        <item name="android:background">@color/colorLightBlue</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+    <style name="operandsTextViewLandScape" parent="operandsTextView">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+    <style name="operandsAddTextView" >
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>

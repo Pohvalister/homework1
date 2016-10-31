@@ -1,7 +1,194 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="14"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/operandsLayout">
+
+            <TextView
+                android:id="@+id/operator"
+                style="@style/operandsAddTextView"
+                android:layout_width="40dp"
+                android:background="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/firstVal"
+                style="@style/operandsTextViewLandScape" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/operandsLayout">
+
+            <TextView
+                android:id="@+id/equal2"
+                style="@style/operandsAddTextView"
+                android:layout_width="40dp"
+                android:text="=" />
+
+            <TextView
+                android:id="@+id/secondVal"
+                style="@style/operandsTextViewLandScape" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="4"
+            android:background="@android:color/background_light"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="15dp"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <TableLayout
+            android:id="@+id/numTable"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:background="@android:color/holo_blue_light">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorHeavyBlue">
+
+                <Button
+                    android:id="@+id/d1"
+                    style="@style/numberButton"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/d2"
+                    style="@style/numberButton"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/d3"
+                    style="@style/numberButton"
+                    android:text="3" />
+
+                <Button
+                    android:id="@+id/point"
+                    style="@style/numberButton"
+                    android:text="."
+                    android:onClick="pointSet" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorHeavyBlue">
+
+                <Button
+                    android:id="@+id/d4"
+                    style="@style/numberButton"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/d5"
+                    style="@style/numberButton"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/d6"
+                    style="@style/numberButton"
+                    android:text="6" />
+
+                <Button
+                    android:id="@+id/d0"
+                    style="@style/numberButton"
+                    android:text="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorHeavyBlue">
+
+                <Button
+                    android:id="@+id/d7"
+                    style="@style/numberButton"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/d8"
+                    style="@style/numberButton"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/d9"
+                    style="@style/numberButton"
+                    android:text="9" />
+
+                <Button
+                    android:id="@+id/equal1"
+                    style="@style/numberButton"
+                    android:text="="
+                    android:onClick="calClick" />
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="2"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/clear"
+            style="@style/operatorButton"
+            android:text="DEL"
+            android:onClick="delClick" />
+
+        <Button
+            android:id="@+id/div"
+            style="@style/operatorButton"
+            android:text="/"
+            android:onClick="divClick" />
+
+        <Button
+            android:id="@+id/mul"
+            style="@style/operatorButton"
+            android:text="*"
+            android:onClick="mulClick" />
+
+        <Button
+            android:id="@+id/sub"
+            style="@style/operatorButton"
+            android:text="-"
+            android:onClick="subClick" />
+
+        <Button
+            android:id="@+id/add"
+            style="@style/operatorButton"
+            android:text="+"
+            android:onClick="addClick" />
+    </LinearLayout>
 
 </LinearLayout>
